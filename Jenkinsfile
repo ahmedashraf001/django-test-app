@@ -17,4 +17,13 @@ pipeline {
             }
         }
     }
+
+      post {
+        success {
+            sh 'echo "build successful"'
+        }
+        failure {
+            sh 'echo "build failed"'
+        }
+    }
 }
